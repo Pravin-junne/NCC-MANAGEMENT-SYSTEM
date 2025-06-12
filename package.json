@@ -1,34 +1,83 @@
 {
   
   "engines": {
-    "node": "v20.15.0"
+  
+    
+  "node": "v20.15.0"
+  
   },
+  
   "name": "ncc-management-system",
+  
   "version": "1.0.0",
+  
   "main": "app.js",
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  
+    
+  "test": "echo \"Error: no test specified\" && exit 1"
+  
   },
+  
   "author": "pravin",
+  
   "license": "ISC",
+  
   "description": "",
+  
   "dependencies": {
-    "bcrypt": "^5.1.1",
-    "body-parser": "^1.20.3",
-    "cloudinary": "^2.5.1",
-    "connect-flash": "^0.1.1",
-    "dotenv": "^16.4.7",
-    "ejs": "^3.1.10",
-    "express": "^4.21.2",
-    "express-ejs-layouts": "^2.5.1",
-    "express-session": "^1.18.1",
-    "method-override": "^3.0.0",
-    "mongoose": "^8.9.4",
-    "multer": "^1.4.5-lts.1",
-    "multer-storage-cloudinary": "^4.0.0",
-    "or": "^0.2.0",
-    "passport": "^0.7.0",
-    "passport-local": "^1.0.0",
-    "router": "^2.0.0"
+  
+    
+  "bcrypt": "^5.1.1",
+  
+    
+  "body-parser": "^1.20.3",
+  
+    
+  "cloudinary": "^1.30.0",
+  
+    
+  "connect-flash": "^0.1.1",
+  
+    
+  "dotenv": "^16.4.7",
+  
+    
+  "ejs": "^3.1.10",
+  
+    
+  "express": "^4.21.2",
+  
+    
+  "express-ejs-layouts": "^2.5.1",
+  
+    
+  "express-session": "^1.18.1",
+  
+    
+  "method-override": "^3.0.0",
+  
+    
+  "mongoose": "^8.9.4",
+  
+    
+  "multer": "^1.4.5-lts.1",
+  
+    
+  "multer-storage-cloudinary": "^4.0.0",
+  
+    
+  "or": "^0.2.0",
+  
+    
+  "passport": "^0.7.0",
+  
+    
+  "passport-local": "^1.0.0",
+  
+    
+  "router": "^2.0.0"
+  
   }
 }
