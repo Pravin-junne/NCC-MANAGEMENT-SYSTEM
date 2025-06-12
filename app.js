@@ -174,7 +174,7 @@ app.get("/cadetListing", async (req, res) => {
     }
      */
     const cadet = await Cadet.find({});
-    res.render("pages/cadetListing", { cadet });
+    res.render("pages/cadetListing", { cadet, currUser: req.user });  
 });
 
 // ✅ ADMIN page
