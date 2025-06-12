@@ -1,0 +1,99 @@
+<style>
+    .vh-100 {
+        height: 100vh; 
+    }
+</style>
+
+<body>
+    <u>
+        <h5 style="text-align: center">Add New Cadet Listing</h5>
+    </u>
+    <form 
+    method="POST" 
+    action="/admin/add-cadet" 
+    novalidate 
+    class="row g-3 needs-validation" 
+    enctype="multipart/form-data"
+    >
+    
+    <div class="container-fluid vh-100">
+            
+            <div class="">
+                <label for="name" class="form-label">Name</label>
+                <input 
+                name="name" 
+                placeholder="Enter Your Name" 
+                type="text"
+                class="form-control"
+                required>
+                <div class="invalid-feedback">Please enter the name</div>
+            </div>
+        
+            <div class="">
+                <label for="education" class="form-label">Education</label>
+                <input 
+                name="education" 
+                placeholder="Enter education details" 
+                type="text"
+                class="form-control"
+                required>
+                <div class="invalid-feedback">Please enter the degree names.</div>
+            </div>
+
+            <div class="">
+                <label for="contact" class="form-label">Contact</label>
+                <input 
+                name="contact" 
+                placeholder="Enter your active phone number" 
+                type="text"
+                class="form-control"
+                required>
+                <div class="invalid-feedback">Please enter phone number</div>
+            </div>
+        
+            <div class="">
+                <label for="email" class="form-label">E-mail</label>
+                <input 
+                name="email" 
+                placeholder="Enter email" 
+                type="email"
+                class="form-control"
+                required>
+                <div class="invalid-feedback">Please enter the email</div>
+            </div>
+        
+            <div class="">
+                <label for="batch" class="form-label">Batch</label>
+                <input 
+                name="batch" 
+                placeholder="Enter the starting year and final year (e.g., 2022-2025)" 
+                type="text"
+                class="form-control"
+                required>
+                <div class="invalid-feedback">Please enter the batch you belong to</div>
+            </div>
+        
+            <div class="">
+                <label for="achievement" class="form-label">Achievement</label>
+                <input 
+                name="achievement" 
+                placeholder="Enter your achievements" 
+                type="text"
+                class="form-control">
+                <div class="invalid-feedback">Please enter the achievements</div>
+            </div>
+
+            <div class="">
+                <label for="img" class="form-label">Upload Image</label>
+                <input 
+                name="img" 
+                type="file"
+                class="form-control">
+                <div class="invalid-feedback">Please upload the image</div>
+            </div>
+        
+            <button class="btn btn-success mb-3 ">Add</button>
+            <br><br>
+        </div>
+    </form>
+</body>

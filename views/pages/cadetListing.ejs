@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Show All Cadets</title>
+</head>
+
+<body>
+
+  <h1 id="h1Doc">NCC Alumni Network</h1>
+  <h3 id="h3Doc">
+    The NCC Alumni Network is a dedicated space to recognize and connect our esteemed ex-cadets who have carried forward
+    the values of discipline, leadership, and service into their professional lives. This platform celebrates their
+    achievements across various fields—defense, civil services, corporate, education, and more—while inspiring the next
+    generation of cadets. Together, they form a strong community that reflects the true spirit and legacy of the
+    National Cadet Corps
+  </h3>
+  <hr>
+  <div class="container card list-card mt-5">
+    <div class="row" id="cardStyle">
+      <% cadet.forEach(function(cadet) { %>
+        <div class="col-md-4 mt-5">
+          <div class="card">
+
+            <div class="cadetImg">
+              <img class="card-img-top show-img " src="<%= cadet.img %>" alt="Cadet Image" class="card-img-top">
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title text-center">
+                <%= cadet.name %>
+              </h5>
+              <hr>
+
+              <p class="card-text">
+                <b>
+                  Education:
+                </b>
+                <%= cadet.education %>
+              </p>
+              <hr>
+              <!--<p class="card-text">Age: <%=// cadet.age %></p>-->
+
+              <p class="card-text">
+                <b>
+                  Contact:
+                </b>
+                <%= cadet.contact %>
+              </p>
+              <hr>
+
+              <p class="card-text">
+                <b>
+                  Email:
+                </b>
+                <%= cadet.email %>
+              </p>
+              <hr>
+
+              <p class="card-text">
+                <b>
+                  Batch:
+                </b>
+                <%= cadet.batch %>
+              </p>
+
+              <p class="card-text">
+                <b>
+                  Achievement:
+                </b>
+                  <%= cadet.achievement %>
+              </p>
+
+              <%if(currUser){%>
+                  <button onclick="deleteCadet('<%= cadet._id %>')" class="btn btn-danger text-center">
+                    Delete
+                  </button>
+              <%}%>
+            </div>
+          </div>
+        </div>
+        <% }); %>
+    </div>
+  </div>
+
+
+  <!--delete script-->
+  <script>
+    async function deleteCadet(cadetId) {
+      if (confirm("Are you sure you want to delete this cadet?")) {
+        try {
+          let response = await fetch(`/admin/delete-cadet/${cadetId}`, {
+            method: "DELETE",
+            headers: { "Content-Type": "application/json" }
+          });
+
+          let result = await response.json();
+          if (result.success) {
+            alert("Cadet deleted successfully!");
+            window.location.reload(); // Reload page to update list
+          } else {
+            alert("Failed to delete cadet.");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          alert("An error occurred while deleting.");
+        }
+      }
+    }
+  </script>
+
+  </div>
+
+
+
+</body>
+
+</html>

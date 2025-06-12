@@ -1,0 +1,182 @@
+/*nav bar*/
+.nav-link:hover{
+    background-color: rgba(114, 134, 233, 0.559);
+    
+    
+    border-radius: 5px;
+}
+
+
+
+
+/*footer*/
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info-links{
+    width: 100%;
+}
+
+.f-info-socials{
+    width: 100%;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+.f-info{
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    text-align: center;
+}
+
+
+/*body*/
+body {
+    overflow-y: scroll !important; /* Enable vertical scrolling */
+    height: 100vh !important; /* Set the height of the body to 100% of the viewport height */
+}
+
+
+
+/* Ensure full-page layout */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content area pushes footer down */
+.main-content {
+    flex: 1;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #ebebeb;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Footer links */
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+.f-info-links {
+    width: 100%;
+}
+
+.f-info-socials {
+    width: 100%;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.f-info {
+    height: 10rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;  /* Fix alignment */
+    text-align: center;
+}
+
+
+/*LISTING IMAGE*           need to fix bug
+/
+.card-img-top {
+    width: 60%;
+}
+.IMG{
+    align-self: center;
+    width: 50%;
+} */
+
+.cadetImg{
+    width:50%;
+    align-self: center;
+    border: rgb(0, 0, 0) 2px solid;
+    border-radius: 5px;
+}
+
+
+
+#cardStyle{
+    background: #222222;
+}
+
+/*study document*/
+#h1Doc{
+    color:red;
+    text-align: center;
+    text-decoration: green underline;
+}
+
+#h3Doc{
+    color: pink;
+    background-color: #222222;
+    text-align: center;
+}
+
+#mainDiv{
+    border:2px solid rgb(241, 41, 178);
+    padding:1vh;
+}
+
+/*gallery*/
+
+
+.image-item img {
+    width: 100%; /* Ensures the image fits the container */
+    height: 400px; /* Sets a fixed height */
+    object-fit: cover; /* Crops the image properly while maintaining aspect ratio */
+    border-radius: 5px; /* Optional: Rounds corners for a better look */
+}
+
+/*uploadDocument form*/
+#uploadDoc h2{
+    text-align: center;
+    color: rgba(255, 72, 0, 0.905);
+}
+
+/*upload photos form*/
+#uploadImg h2{
+    text-align: center;
+    color: rgba(255, 72, 0, 0.905);
+}
+
+
+/*home page carousel*/
+.carousel-inner img {
+    
+    width: 100%;
+    height: 500px;       /* or any height you prefer */
+    object-fit:scale-down;   /* ensures image fills the space without stretching */
+
+}
+
+/*home page about anol*/
+#About_ano{
+        border: solid rgb(110, 6, 6) 2px;
+    height: 300px;
+    align-items: flex-start; /* Aligns items at the top */
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 50px;
+}

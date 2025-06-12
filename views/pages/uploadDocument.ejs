@@ -1,0 +1,33 @@
+<div id="uploadDoc">
+ <legend>
+    <h2>Upload Study Document</h2>
+<form action="/studyDocs/upload" method="POST" enctype="multipart/form-data">
+    
+    <div class="mb-3">
+        <label for="title" class="form-label">Document Title:</label>
+        <input 
+        type="text" 
+        id="title" 
+        name="title" 
+        class="form-control" 
+        placeholder="Enter the title for document" 
+        required>
+    </div>
+
+    <br>
+    <div class="mb-3">
+        <label for="file" class="form-label">Select File:</label>
+        <input 
+        type="file" 
+        id="file" 
+        name="file" 
+        accept=".pdf,.docx,.txt" 
+        class="form-control" 
+        required>
+    </div>
+    <br>
+    <button class="btn btn-success mb-3" type="submit">Upload</button>
+</form>
+<a href="/studyDocs/documents">View All Documents</a>
+</legend>
+</div>

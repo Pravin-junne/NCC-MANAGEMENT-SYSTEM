@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Login</title>
+</head>
+<body>
+  <div class="row mt-3">
+    <h1 class="col-6 offset-3">
+      Login
+    </h1>
+    <div class="col-6 offset-3">
+    <p><%= message %></p>
+      <form action="/login" method="post" class="needs-validation" novalidate>
+          <div class="mb-3">
+              <lable for="email" class="form-label">
+                  Email
+              </lable>
+              <input name="email" id="email" type="email" class="form-control" required>
+              <div class="valid-feedback">Looks good!</div>
+          </div>
+
+        
+          <div class="mb-3">
+              <lable for="password" class="form-label">
+                  Password
+              </lable>
+              <input name="password" id="password" type="password" class="form-control" required>
+              <div class="valid-feedback">Looks good!</div>
+          </div>
+          <button class="btn btn-success mb-3">Login</button>
+      </form>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+</head>
+<body>
+  <h1>1]Cadet Management</h1>
+  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+    <button type="button" onclick="window.location.href='/cadetListing'" class="btn btn-danger">
+      Delete Cadet
+    </button>
+    <!--
+    <button type="button" class="btn btn-warning">Modify</button>
+    -->
+    <a href="admin/add-cadet" class="btn btn-success">
+      Add Cadet
+    </a>
+  </div>
+  <hr>
+
+  <h1>2]Study Notes Management</h1>
+  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+    <button type="button" onclick="window.location.href='/studyDocs/documents'" class="btn btn-danger">
+      Delete Notes
+    </button>
+    
+    <!--
+    <button type="button" class="btn btn-warning">Modify</button>
+    -->
+    
+    <a href="/studyDocs/upload" class="btn btn-success">Add Notes</a>
+
+  </div>
+  <hr>
+
+  <h1>3]Event Report Management</h1>
+  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+    <button type="button" onclick="window.location.href='event/eventReport'" class="btn btn-danger">
+      Delete Report
+    </button>
+    <!--
+    <button type="button" class="btn btn-warning">Modify</button>
+    -->
+    <a href="event/upload" class="btn btn-success">
+      Add Report
+    </a>
+  </div>
+  <hr>
+
+  <h1>4]Gallery Photos Management</h1>
+  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+    <button type="button" onclick="window.location.href='/gallery'" class="btn btn-danger">
+      Delete Photos
+    </button>
+    <!--
+    <button type="button" class="btn btn-warning">Modify</button>
+    -->
+    <a href="gallery/upload" class="btn btn-success">
+      Add Photos
+    </a>
+  </div>
+  <hr>
+</body>
+</html>

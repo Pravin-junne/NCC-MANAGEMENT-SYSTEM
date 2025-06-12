@@ -1,0 +1,56 @@
+
+<div id="mainDiv">
+    <h1 id="h1Doc">Event Reports</h1>
+    <h3 id="h3Doc">
+       <u>Welcome to the Event Reports section!</u><br>
+       <p> Here, cadets can read and download detailed reports on various events and programs organized by Div-X of NCC. Stay updated with key highlights, achievements, and insights from past events, ensuring you never miss any important moments.</p>
+    </h3>
+    <hr>
+    <ul>
+        <% eventReport.forEach((doc, index) => { %>
+          <h1>
+            <li class="list-group-item list-group-item-success"><span><%= index + 1 %>.</span> <%= doc.title %></li>
+          </h1> 
+          <button class="btn btn-info" onclick="togglePDF('<%=index%>')">Read Document</button>
+    
+          <a  href="<%= doc.fileUrl %>" download>
+            <button class="btn btn-dark">
+                Download
+            </button>
+          </a>
+          
+          <% if (currUser) { %>
+              <form action="/event/eventReport/<%= doc._id %>?_method=DELETE" method="POST" style="display:inline;">
+                  <button type="submit" class="btn btn-danger">Delete</button>
+              </form>
+          <% } %>
+    
+          <div id="pdfContainer-<%=index%>" style="display: none; margin-top: 10px;">
+            <iframe id="pdfViewer" src="<%= doc.fileUrl %>" width="100%" height="800px"></iframe>
+          </div>
+          
+    
+          <hr>
+        <% }) %>
+    </ul>
+    </div>
+    
+    <script>
+        function togglePDF(index) {
+            var pdfContainer = document.getElementById("pdfContainer-"+index);
+            pdfContainer.style.display = pdfContainer.style.display === "none" ? "block" : "none";
+        }
+    </script>
+            
+                
+                
+                   
+                
+          
+             
+        
+        
+        
+            
+                
+    

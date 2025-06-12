@@ -1,0 +1,55 @@
+
+<div id="mainDiv">
+<h1 id="h1Doc">Battlefield of Knowledge</h1>
+<h3 id="h3Doc">
+   <u>NCC e-Library – Empowering Cadets with Knowledge 📚💡</u><br>
+Welcome to the NCC e-Library, a dedicated digital learning hub designed exclusively for NCC cadets. This platform serves as a comprehensive repository of study materials, ensuring that every cadet has easy access to essential resources for their training and academic excellence.
+</h3>
+<hr>
+<ul>
+    <% documents.forEach((doc, index) => { %>
+      <h1>
+        <li class="list-group-item list-group-item-success"><span><%= index + 1 %>.</span> <%= doc.title %></li>
+      </h1> 
+      <button class="btn btn-info" onclick="togglePDF('<%=index%>')">Read Document</button>
+
+      <a  href="<%= doc.fileUrl %>" download>
+        <button class="btn btn-dark">
+            Download
+        </button>
+      </a>
+      
+      <% if (currUser) { %>
+          <form action="/studyDocs/documents/<%= doc._id %>?_method=DELETE" method="POST" style="display:inline;">
+              <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
+      <% } %>
+
+      <div id="pdfContainer-<%=index%>" style="display: none; margin-top: 10px;">
+        <iframe id="pdfViewer" src="<%= doc.fileUrl %>" width="100%" height="800px"></iframe>
+      </div>
+      
+
+      <hr>
+    <% }) %>
+</ul>
+</div>
+
+<script>
+    function togglePDF(index) {
+        var pdfContainer = document.getElementById("pdfContainer-"+index);
+        pdfContainer.style.display = pdfContainer.style.display === "none" ? "block" : "none";
+    }
+</script>
+        
+            
+            
+               
+            
+      
+         
+    
+    
+    
+        
+            

@@ -1,0 +1,47 @@
+<div id="uploadImg">
+<h2>Upload Photos</h2>
+<form action="/gallery/upload" method="POST" enctype="multipart/form-data">
+    <!-- Hidden Input to Store Category -->
+    <input type="hidden" id="selectedCategory" name="category" required>
+    <h3>
+        <label for="categorySelect">Select Category:</label>
+    </h3>
+    <select id="categorySelect" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required>
+        <option value="Uniform Photos">Uniform Photos</option>
+        <option value="Drill Photos">Drill Photos</option>
+        <option value="Award Ceremony Photos">Award Ceremony Photos</option>
+        <option value="Cadet Vibes">Cadet Vibes</option>
+    </select>
+
+    <div>
+        <h3>
+            <label 
+                for="formFileLg" 
+                class="form-label">
+                Select Image:
+            </label>
+        </h3>
+        <input 
+        class="form-control form-control-lg" 
+        id="formFileLg" 
+        type="file" 
+        name="image" 
+        accept="image/*" 
+        required>
+        
+    </div>
+    <button class="btn btn-success" type="submit">Upload Image</button>
+</form>
+</div>
+<script>
+    // Set selected category to the hidden input
+    document.getElementById("categorySelect").addEventListener("change", function() {
+        document.getElementById("selectedCategory").value = this.value;
+    });
+
+    // Set default category on page load
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("selectedCategory").value = document.getElementById("categorySelect").value;
+    });
+</script>
+

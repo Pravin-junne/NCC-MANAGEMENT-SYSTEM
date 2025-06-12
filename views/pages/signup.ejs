@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Signup</title>
+</head>
+<body>
+<div class="row mt-3">
+  <h1 class="col-6 offset-3">
+    <u>
+      Admin Signup
+    </u>
+  </h1>
+
+  <div class="col-6 offset-1">
+    <p><%= message %></p>
+    <form action="/signup" method="post" class="needs-validation" novalidate>
+          <div class="mb-3">
+              <lable for="username" class="form-label">
+                  Username
+              </lable>
+              <input name="name" id="username" type="text" class="form-control" required>
+              <div class="valid-feedback">Looks good!</div>
+          </div>
+
+          <div class="mb-3">
+              <lable for="email" class="form-label">
+                  E-mail
+              </lable>
+              <input name="email" id="email" type="email" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+              <lable for="password" class="form-label">
+                  Password
+              </lable>
+              <input name="password" id="password" type="password" class="form-control" required>
+              <div class="valid-feedback">Looks good!</div>
+          </div>
+
+          <div class="mb-3">
+            <lable for="accessKey" class="form-label">
+              accessKey
+            </lable>
+            <!-- Add secret access key field -->
+            <input type="text" name="accessKey" id="accessKey" placeholder=" Admin Access Key" class="form-control" required>
+          </div>
+
+          <button class="btn btn-success mb-3">SignUP</button>
+      </form>
+  </div>
+</div>
+</body>
+</html>

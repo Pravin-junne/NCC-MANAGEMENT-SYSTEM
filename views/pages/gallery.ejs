@@ -1,0 +1,52 @@
+<h1 id="h1Doc">Gallery of Vibes</h1>
+  <h3 id="h3Doc">
+A vibrant collection of memories, emotions, and experiences — captured in frames that speak louder than words.
+  </h3>
+  <hr>
+
+<h2>Select Category to View:</h2>
+<select id="galleryCategoryFilter">
+    <option value="All">All</option>
+    <option value="Uniform Photos">Uniform Photos</option>
+    <option value="Drill Photos">Drill Photos</option>
+    <option value="Award Ceremony Photos">Award Ceremony Photos</option>
+    <option value="Cadet Vibes">Cadet Vibes</option>
+</select>
+
+<div id="gallery" class="row">
+    <% images.forEach(image => { %>
+        <div class="col-md-3 col-sm-6 mb-4" data-category="<%= image.category %>">
+            <div class="image-item">
+                <img src="<%= image.imageUrl %>" alt="Gallery Image">
+                <p>Category: <%= image.category %></p>
+                
+                <a href="<%= image.imageUrl %>" class="btn btn-success btn-sm" target="_blank">
+                    Show
+                </a>
+                
+
+                <% if (locals.currUser) { %>
+                    <form action="/gallery/<%= image._id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+                    </form>
+                <% } %>
+            </div>
+        </div>
+    <% }) %>
+</div>
+
+<script>
+    document.getElementById("galleryCategoryFilter").addEventListener("change", function () {
+        let selectedCategory = this.value;
+        let images = document.querySelectorAll("#gallery .col-md-3");
+    
+        images.forEach(image => {
+            if (selectedCategory === "All" || image.getAttribute("data-category") === selectedCategory) {
+                image.style.display = "block";
+            } else {
+                image.style.display = "none";
+            }
+        });
+    });
+    </script>
+    
